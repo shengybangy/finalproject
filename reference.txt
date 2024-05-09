@@ -1,0 +1,10 @@
+Database Connection to React App
+
+- React handles the Front End (Browser) side of the application.
+
+- We still need a Back End (Database) to persist values that are stored
+in State.
+
+    - DOM (Document Object Model): Virtual representation of
+    code sourced from an HTML file.
+
