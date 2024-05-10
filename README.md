@@ -6,3 +6,4 @@
 
 - Users can create, read, update, and delete Items
 - Users can sort new Items into Folders
+- Users can name their folders
