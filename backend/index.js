@@ -8,7 +8,7 @@ mongoose.connect(process.env.SECRET_KEY, {
     useUnifiedTopology: true
 });
 
-// Database Schema - Structure to Hold Each New Item That We Create
+// Database Schema - Structure to Hold Each New Item
 const ItemSchema = new mongoose.Schema({
     name: String,
     description: String,
