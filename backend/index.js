@@ -1,9 +1,9 @@
+
+require('dotenv').config()
+
 const mongoose = require('mongoose');
 
-// The line below should be omitted from version control
-// because it contains sensitive information
-// mongodb+srv://sarahsheng08:<password>@sheng0.egv5ucy.mongodb.net/
-mongoose.connect('mongodb+srv://sarahsheng08:finalproject08@sheng0.egv5ucy.mongodb.net/', {
+mongoose.connect(process.env.SECRET_KEY, {
     useNewUrlParser: true, 
     useUnifiedTopology: true
 });
@@ -56,20 +56,3 @@ app.delete("/items/:id", (req, resp) => {
 
 app.listen(5001);
 
-// app.post("/register", async (req, resp) => {
-//     try {
-//         const user = new User(req.body);
-//         let result = await user.save();
-//         result = result.toObject();
-//         if (result) {
-//             delete result.password;
-//             resp.send(req.body);
-//             console.log(result);
-//         } else {
-//             console.log("User already register");
-//         }
- 
-//     } catch (e) {
-//         resp.send("Something Went Wrong");
-//     }
-// });
