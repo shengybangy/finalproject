@@ -8,10 +8,6 @@ function AddItemForm({items, setItems}) {
     const [category, setCategory] = useState("");
 
     function handleSubmit(e) {
-
-        // Prevent the default form submission action (reload)
-        // Helps us to preserve "items" state value that would
-        // be lost if the page was refreshed
         e.preventDefault();
 
         // Create a new item object
@@ -33,8 +29,7 @@ function AddItemForm({items, setItems}) {
                 alert('Failed to add item.');
                 return;
             }
-            // Update the items state variable with the new item
-            // once we get a successful response from the server
+
             response.json().then(data => {
                 setItems([...items, data]);
             })
